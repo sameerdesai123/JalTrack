@@ -1,4 +1,0 @@
-Fix issue with firebase connectivity.
-Go through the DBConnection IFEE and retrive the data .
-DONOT change any variable name
-Read comments for missing functions throughout the file.

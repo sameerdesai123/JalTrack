@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>::JalTrack WebApp::</title>
+    <link rel="stylesheet" href="/public/index.css" type="text/css">
+  </head>
+  <body>
+    <header class="nav-bar">
+      <div class="logo" style="display: inline-block;">
+        <a href="#">
+          <img src="https://images.fineartamerica.com/images-medium-large-5/1-water-drop-impact-john-harwoodscience-photo-library.jpg" alt="JalTrack-Logo" style="width: 25px; height: 25px;">
+        </a>
+      </div>
+      <div>
+          <ul class="login" style="float: right;text-decoration: none;">
+              <li style="list-style: none;display: inline-block;"><a href="login.html" style="text-decoration: none;">login</a></li>
+              <li style="list-style: none;display: inline-block;"><a href="sign_up.html" style="text-decoration: none;">Sign Up</a></li>
+          </ul>
+      </div>
+</header>
+<div class="display-container">
+
+  <div class="display-module"> 
+      Volume
+      <div id="d01">
+        100.00 l/s
+      </div>      
+  </div>
+  <div class="display-module">
+    Bill
+    <div id="d02">
+      Rs. 100.00 
+    </div>
+  </div>
+</div>
+<div class="exit-panel">
+    <button name="exit" id="exit-btn">EXIT</button>
+</div>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.5.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.5.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.5.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.5.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.5.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script src="/public/index.js"></script>
+  </body>
+</html>

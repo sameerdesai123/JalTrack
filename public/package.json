@@ -1,0 +1,24 @@
+{
+  "name": "jaltrack",
+  "version": "1.0.0",
+  "description": "all skeleton html",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sameerdesai123/JalTrack.git"
+  },
+  "keywords": [
+    "JalTrack",
+    "Volume",
+    "Bill"
+  ],
+  "author": "Team JalTrack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sameerdesai123/JalTrack/issues"
+  },
+  "homepage": "https://github.com/sameerdesai123/JalTrack#readme"
+}

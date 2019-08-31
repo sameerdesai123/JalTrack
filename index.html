@@ -24,29 +24,33 @@
 </head>
 
 <body class="pink darken-4">
-    <div class="row" style="margin-top:180px;">
-        <div class="col s4"></div>
-        <div class="col s4 ">
-            <div class="hoverable card-panel cyan accent-4 black-text">
-                <h4 class="center-align white-text" style="font-family: 'Acme', sans-serif;"> <i class="material-icons">location_on</i>JALTRACK</h4>
-                <ul class="collection ">
-                    <li class="collection-item">
-                        <div class="green-text" style="font-family: 'Acme', sans-serif;">Liters/second<span class="badge ls blue-text">4</span></div>
-                    </li>
-                    <li class="collection-item">
-                        <div class="pink-text" style="font-family: 'Acme', sans-serif;">Total in litres<span class="badge total blue-text" id="01">4</span></div>
-                    </li>
-                    <li class="collection-item">
-                      <div class="blue-text" style="font-family: 'Acme', sans-serif;" >Bill in Rs<span class="badge bill blue-text">400</span></div>
-                  </li>
-                </ul>
-                <button name="exit" id="exit-btn" style="text-align: center; position: center;">Stop Data Retrival</button>
+    <section style="height: 100%" >
+        <div class="row" style="margin-top:180px;">
+            <div class="col s4"></div>
+            <div class="col s4 ">
+                <div class="hoverable card-panel cyan accent-4 black-text">
+                    <h4 class="center-align white-text" style="font-family: 'Acme', sans-serif;"> <i class="material-icons">location_on</i>JALTRACK</h4>
+                    <ul class="collection ">
+                        <li class="collection-item">
+                            <div class="green-text" style="font-family: 'Acme', sans-serif;">Liters/second<span class="badge ls blue-text">0</span></div>
+                        </li>
+                        <li class="collection-item">
+                            <div class="pink-text" style="font-family: 'Acme', sans-serif;">Total in litres<span class="badge total blue-text" id="01">0</span></div>
+                        </li>
+                        <li class="collection-item">
+                          <div class="blue-text" style="font-family: 'Acme', sans-serif;" >Bill in Rs<span class="badge bill blue-text">0</span></div>
+                      </li>
+                    </ul>
+                    <a href="https://jaltrack.firebaseapp.com/stop.html"><button name="exit" id="exit-btn" style="text-align: center; position: center;">Stop Process</button></a>
+                </div>
+                
             </div>
-            
+            <div class="col s4"></div>
         </div>
-        <div class="col s4"></div>
-    </div>
-
+    </section>
+    <div id="chartContainer-1" style="height: 200px; width: 40%; float: left;"></div>
+    <div id="chartContainer-2" style="height: 200px; width: 40%; float: right;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -60,27 +64,6 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        /*
-          
-        var database = firebase.database();
-        var lsRef = firebase.database().ref('ls');
-
-        lsRef.on('value', function (snapshot) {
-            // This snapshot returns the value of total litres/seconds automatically
-            console.log(snapshot.val());
-            $('.ls').text(snapshot.val());
-        });
-
-        var totalRef = firebase.database().ref('total');
-        totalRef.on('value', function (snapshot) {
-            // This snapshot returns the value of total litres automatically
-        
-            console.log(snapshot.val());
-            $('.total').text(snapshot.val());
-      
-            
-        });
-        */
 
     </script>
     <script src="index.js"></script>

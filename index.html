@@ -1,72 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JALTRACk</title>
-    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jal-Track-v4</title>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
+  <link rel="stylesheet" href="styles.css">
 
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-database.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+
+  <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-database.js"></script>
 
 </head>
 
-<body class="pink darken-4">
-    <section style="height: 100%" >
-        <div class="row" style="margin-top:180px;">
-            <div class="col s4"></div>
-            <div class="col s4 ">
-                <div class="hoverable card-panel cyan accent-4 black-text">
-                    <h4 class="center-align white-text" style="font-family: 'Acme', sans-serif;"> <i class="material-icons">location_on</i>JALTRACK</h4>
-                    <ul class="collection ">
-                        <li class="collection-item">
-                            <div class="green-text" style="font-family: 'Acme', sans-serif;">Liters/second<span class="badge ls blue-text">0</span></div>
-                        </li>
-                        <li class="collection-item">
-                            <div class="pink-text" style="font-family: 'Acme', sans-serif;">Total in litres<span class="badge total blue-text" id="01">0</span></div>
-                        </li>
-                        <li class="collection-item">
-                          <div class="blue-text" style="font-family: 'Acme', sans-serif;" >Bill in Rs<span class="badge bill blue-text">0</span></div>
-                      </li>
-                    </ul>
-                    <a href="https://jaltrack.firebaseapp.com/stop.html"><button name="exit" id="exit-btn" style="text-align: center; position: center;">Stop Process</button></a>
-                </div>
-                
-            </div>
-            <div class="col s4"></div>
-        </div>
-    </section>
-    <div id="chartContainer-1" style="height: 200px; width: 40%; float: left;"></div>
-    <div id="chartContainer-2" style="height: 200px; width: 40%; float: right;"></div>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyD3L6fr1i1_Md4fxJQAPmS60lzr7OsuJho",
-            authDomain: "jaltrack.firebaseapp.com",
-            databaseURL: "https://jaltrack.firebaseio.com",
-            projectId: "jaltrack",
-            storageBucket: "jaltrack.appspot.com",
-            messagingSenderId: "663656952298",
-            appId: "1:663656952298:web:28493e2bcfb60053"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+<body>
 
-    </script>
-    <script src="index.js"></script>
+  <section id="navbar">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a id="main-head" class="navbar-brand" href="">JalTrack</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tag" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="tag">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a href="pricing.html" class="nav-pricing nav-link">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class=" nav-link nav-pricing" href="">Shoot stories</a>
+            </li>
+          </ul>
+    </div>
+    </nav>
+  </section>
+
+  <section style=" text-align:center;" id="info">
+    <div class="cal-sm-12">
+      <div>
+        <img src="pics/Jal-Track-Logo-NoBg.png" alt="logo">
+      </div>
+      <div style="text-align:center;">
+        <ul class = "list" style="list-style: none;">
+          <li style="margin-right: 9px;">
+            litres / second - <span class="badge ls blue-text">4</span>
+          </li>
+
+          <li style=" margin-right: 21px;">
+            Total in litres - <span class="badge total blue-text" id="01">4</span>
+          </li>
+
+          <li>
+            Bill in Rs - <span class="badge bill blue-text">400</span>
+          </li>
+
+        </ul>
+        <!-- <TABLE class="tab" BORDER=1  BORDERCOLOR=RED>
+          <TR>
+            <TD>litres / second</TD>
+            <TD><span class="badge ls blue-text">4</span></TD>
+          </TR>
+          <TR>
+            <TD>Total in litres</TD>
+            <TD><span class="badge total blue-text" id="01">4</span></TD>
+          </TR>
+        </TABLE> -->
+
+
+        <a href="stop.html"><button class="btn btn-outline-danger submit-btn" name="exit" id="exit-btn" style="text-align: center; position: center;">Stop Data Retrieval</button></a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyD3L6fr1i1_Md4fxJQAPmS60lzr7OsuJho",
+      authDomain: "jaltrack.firebaseapp.com",
+      databaseURL: "https://jaltrack.firebaseio.com",
+      projectId: "jaltrack",
+      storageBucket: "jaltrack.appspot.com",
+      messagingSenderId: "663656952298",
+      appId: "1:663656952298:web:28493e2bcfb60053"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="index.js"></script>
 </body>
 
 </html>

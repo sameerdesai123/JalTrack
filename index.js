@@ -1,7 +1,7 @@
     var total, payment, b = 0.00;
     var database = firebase.database();
 
-if (window.location.href == "https://jaltrack.firebaseapp.com/") 
+if (window.location.href == "Your deployed app address") 
 {
     var UIController = function() {
         var UIComponents = {
@@ -65,8 +65,9 @@ if (window.location.href == "https://jaltrack.firebaseapp.com/")
 
 
 // Js for signin page
-
-else if( window.location.href == "https://jaltrack.firebaseapp.com/signin.html") {
+/**
+    
+else if( window.location.href == "") {
     document.getElementById('submit').addEventListener('click', function() {
         var user = document.getElementById('inputEmail').innerHTML;
         var pass = document.getElementById('inputPassword').innerHTML;
@@ -82,4 +83,6 @@ else if( window.location.href == "https://jaltrack.firebaseapp.com/signin.html")
     });
 }
 
+
+*/
 

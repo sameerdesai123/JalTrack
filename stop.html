@@ -86,40 +86,21 @@
 
   </section>
 
-  <script>
-    // Your web app's Firebase configuration
+    <script>
+    // Your web app's Firebase configuration   "FOUND WHEN CREATING YOUR PROJECT ON FIREBASE"
     var firebaseConfig = {
-      apiKey: "AIzaSyD3L6fr1i1_Md4fxJQAPmS60lzr7OsuJho",
-      authDomain: "jaltrack.firebaseapp.com",
-      databaseURL: "https://jaltrack.firebaseio.com",
-      projectId: "jaltrack",
-      storageBucket: "jaltrack.appspot.com",
-      messagingSenderId: "663656952298",
-      appId: "1:663656952298:web:28493e2bcfb60053"
+      apiKey: "YOUR API KEY",
+      authDomain: "YOUR APP DOMAIN",
+      databaseURL: "YOUR DATABASE URL",
+      projectId: "YOUR PROJECT ID",
+      storageBucket: "BUCKET ADDRESS",
+      messagingSenderId: "",
+      appId: ""
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    /*
-
-    var database = firebase.database();
-    var lsRef = firebase.database().ref('ls');
-    lsRef.on('value', function (snapshot) {
-        // This snapshot returns the value of total litres/seconds automatically
-        console.log(snapshot.val());
-        $('.ls').text(snapshot.val());
-    });
-    var totalRef = firebase.database().ref('total');
-    totalRef.on('value', function (snapshot) {
-        // This snapshot returns the value of total litres automatically
-
-        console.log(snapshot.val());
-        $('.total').text(snapshot.val());
-
-
-    });
-    */
   </script>
-  ]
+  
 </body>
 
 </html>

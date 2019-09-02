@@ -1,0 +1,25 @@
+ul {
+    border: 1px solid black;
+}
+
+.navigation{
+  color: black;
+}
+
+.info{
+  text-align:center;
+
+}
+
+.submit-btn{
+  padding-left: 10px;
+    text-align: center;
+
+    margin-left: 32px;
+    border-top-width: 0px;
+}
+
+.list{
+  background-color: #5d5d5d;
+  color: #fff;
+}
